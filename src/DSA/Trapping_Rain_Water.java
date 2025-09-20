@@ -1,4 +1,4 @@
-package Foundation;
+package DSA;
 //
 //public class Trapping_Rain_Water {
 //    public int maxWaterTrapped (@org.jetbrains.annotations.NotNull int[] height) {
