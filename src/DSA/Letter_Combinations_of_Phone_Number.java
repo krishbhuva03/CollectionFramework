@@ -9,7 +9,7 @@ public class Letter_Combinations_of_Phone_Number {
     public List<String> letterCombinations(String digits) {
         List<String> res = new ArrayList<>();
 
-        if (digits == null || digits.length() == 0) {
+        if (digits == null || digits.isEmpty()) {
             return res;
         }
 
@@ -22,6 +22,10 @@ public class Letter_Combinations_of_Phone_Number {
         digitToLetters.put('7', "pqrs");
         digitToLetters.put('8', "tuv");
         digitToLetters.put('9', "wxyz");
+
+        for (Map.Entry<Character, String> entry : digitToLetters.entrySet()) {
+            System.out.println(entry.getKey() + " -> " + entry.getValue());
+        }
 
         backtrack(digits, 0, new StringBuilder(), res, digitToLetters);
 
